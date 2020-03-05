@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="/assets/css/sugar.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="malam">
+	<nav>
+	<ul>
+		<li>
+			<a href="/">Home</a>
+		</li>
+		<li>
+			<a href="/profile">Profile</a>
+		</li>
+		<li>
+			<a href="/gallery">Gallery</a>
+		</li>
+		<li>
+			<button id="tombol">Berubah Ke Mode Malam</button>
+		</li>
+		<!-- 
+		<li>
+			<a href="/tentang/14117141">Tentang Aku</a>
+		</li>
+		 -->
+	</ul>
+</nav>
+	<section>
+		<h1> Gallery</h1>
+
+    <div class="container">
+        <div><img src="/assets/img/table.png" alt="" style="width: 100%; height: 100px;">
+        <p>Tabel Periodik</p>
+        </div>
+        <div><img src="/assets/img/itera.png" alt="" style="width: 100%; height: 100px;">
+        <p>Logo ITERA</p>
+        </div>
+        <div><img src="/assets/img/flowchart.jpg" alt="" style="width: 100%; height: 100px;">
+        <p>Penjelasan Flowchart</p>
+        </div>
+    </div>
+	</section>
+	<script type="text/javascript">
+		switcher = document.getElementById("tombol");
+
+		switcher.onclick = function() {
+			badan=document.getElementsByTagName("body")[0];
+			if (switcher.innerText == "Berubah Ke Mode Siang") {
+				switcher.innerText = "Berubah Ke Mode Malam";
+				badan.classList.remove("malam");
+			}else{
+				switcher.innerText = "Berubah Ke Mode Siang";
+				badan.classList.add("malam");
+			}
+		}
+	</script>
+</body>
+</html>
