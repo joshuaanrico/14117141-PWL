@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="/assets/css/sugar.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<nav>
+	<ul>
+		<li>
+			<a href="/">Home</a>
+		</li>
+		<li>
+			<a href="/profile">Profile</a>
+		</li>
+		<li>
+			<a href="/gallery">Gallery</a>
+		</li>
+		<!-- 
+		<li>
+			<a href="/tentang/14117141">Tentang Aku</a>
+		</li>
+		 -->
+	</ul>
+</nav>
+	<section>
+		<h1> Gallery</h1>
+
+    <div class="container">
+        <div><img src="/assets/img/table.png" alt="" style="width: 100%; height: 100px;">
+        <p>Tabel Periodik</p>
+        </div>
+        <div><img src="/assets/img/itera.png" alt="" style="width: 100%; height: 100px;">
+        <p>Logo ITERA</p>
+        </div>
+        <div><img src="/assets/img/flowchart.jpg" alt="" style="width: 100%; height: 100px;">
+        <p>Penjelasan Flowchart</p>
+        </div>
+    </div>
+	</section>
+	<script>
+		window.onload = autoJalan();
+		function autoJalan() {
+			//var time = new Date().getHours();
+			/*
+			if (time < 10) {
+			    greeting = "Good morning";
+			} else if (time < 20) {
+			    greeting = "Good day";
+			} else {
+			    greeting = "Good Evening";
+			}
+			*/
+			var date = new Date();
+			var jam = parseInt(date.getHours());
+
+			if (jam>18) {
+			   	var element = document.body;
+			   	element.classList.toggle("dark-mode");
+			}
+		}
+	</script>
+</body>
+</html>
