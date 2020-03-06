@@ -3,7 +3,7 @@
 	<link rel="stylesheet" href="/assets/css/sugar.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="malam">
+<body>
 	<nav>
 	<ul>
 		<li>
@@ -14,9 +14,6 @@
 		</li>
 		<li>
 			<a href="/gallery">Gallery</a>
-		</li>
-		<li>
-			<button id="tombol">Berubah Ke Mode Siang</button>
 		</li>
 		<!-- 
 		<li>
@@ -40,17 +37,25 @@
         </div>
     </div>
 	</section>
-	<script type="text/javascript">
-		switcher = document.getElementById("tombol");
+	<script>
+		window.onload = autoJalan();
+		function autoJalan() {
+			//var time = new Date().getHours();
+			/*
+			if (time < 10) {
+			    greeting = "Good morning";
+			} else if (time < 20) {
+			    greeting = "Good day";
+			} else {
+			    greeting = "Good Evening";
+			}
+			*/
+			var date = new Date();
+			var jam = parseInt(date.getHours());
 
-		switcher.onclick = function() {
-			badan=document.getElementsByTagName("body")[0];
-			if (switcher.innerText == "Berubah Ke Mode Siang") {
-				switcher.innerText = "Berubah Ke Mode Malam";
-				badan.classList.remove("malam");
-			}else{
-				switcher.innerText = "Berubah Ke Mode Siang";
-				badan.classList.add("malam");
+			if (jam>18) {
+			   	var element = document.body;
+			   	element.classList.toggle("dark-mode");
 			}
 		}
 	</script>
